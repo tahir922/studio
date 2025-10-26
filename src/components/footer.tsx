@@ -9,7 +9,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Muhammad Tahir. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
-          <Link href="https://www.linkedin.com/in/muhammad-tahir-gamedev/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
+          <Link href="https://www.linkedin.com/in/muhammad-tahir-807960126/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </Link>

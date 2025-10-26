@@ -23,7 +23,7 @@ const AboutSection = () => {
                 <AtSign className="w-5 h-5 text-primary group-hover:animate-pulse" />
                 <span className="group-hover:text-primary transition-colors">tahir8722@gmail.com</span>
             </a>
-             <a href="https://www.linkedin.com/in/muhammad-tahir-gamedev/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+             <a href="https://www.linkedin.com/in/muhammad-tahir-807960126/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
                 <Linkedin className="w-5 h-5 text-primary group-hover:animate-pulse" />
                 <span className="group-hover:text-primary transition-colors">LinkedIn Profile</span>
             </a>
