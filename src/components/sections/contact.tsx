@@ -60,7 +60,7 @@ const ContactSection = () => {
           </p>
           <div className="space-y-4 pt-4">
             <Button asChild size="lg" className="w-full sm:w-auto">
-              <a href="https://drive.google.com/uc?export=download&id=1wHOovbU5I4t43jujnGZEq7Z5ZbH0yEmP" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.google.com/document/d/1wHOovbU5I4t43jujnGZEq7Z5ZbH0yEmP/export?format=pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" /> Download My CV
               </a>
             </Button>
