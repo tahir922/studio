@@ -2,12 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // ✅ Enable static export mode
-  output: "export",
+  // output: "export",
 
   // ✅ Add base path for GitHub Pages
   // Replace 'my-nextjs-app' with your GitHub repository name
-  basePath: "/studio",
-  assetPrefix: "/studio/",
+  // basePath: "/studio",
+  // assetPrefix: "/studio/",
 
   typescript: {
     ignoreBuildErrors: true,
