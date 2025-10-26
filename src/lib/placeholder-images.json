@@ -3,8 +3,8 @@
     {
       "id": "traffic-racing",
       "description": "A screenshot of a 3D car racing game on a highway.",
-      "imageUrl": "https://images.unsplash.com/photo-1727166827019-f82eb1eb1cc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyYWNpbmclMjBnYW1lfGVufDB8fHx8MTc2MTQ4OTMzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "racing game"
+      "imageUrl": "https://images.unsplash.com/photo-1696180393457-1695c896caff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoaWdod2F5JTIwcmFjaW5nfGVufDB8fHx8MTc2MTQ5MTE5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "highway racing"
     },
     {
       "id": "train-sim",
@@ -13,15 +13,15 @@
       "imageHint": "train simulator"
     },
     {
-      "id": "parking-jam",
-      "description": "A screenshot of a truck parking puzzle game.",
-      "imageUrl": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYXIlMjBwYXJraW5nfGVufDB8fHx8MTc2MTQ4OTMzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "car parking"
+      "id": "car-transporter",
+      "description": "A screenshot of a car transporter truck game.",
+      "imageUrl": "https://images.unsplash.com/photo-1594957907749-f835921e6e9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cnVjayUyMGdhbWV8ZW58MHx8fHwxNzYxNDkxMTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "truck game"
     },
     {
       "id": "police-parking",
       "description": "A screenshot of a police car parking school game.",
-      "imageUrl": "https://images.unsplash.com/photo-1615775742364-2feb6533f8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cG9saWNlJTIwY2FyfGVufDB8fHx8MTc2MTQ3MjYyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1625449281218-cbb6183f0aec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb2xpY2UlMjBjYXJ8ZW58MHx8fHwxNzYxNDcyNjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "police car"
     }
   ]

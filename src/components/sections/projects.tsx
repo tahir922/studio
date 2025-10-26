@@ -8,31 +8,35 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Youtube } from 'lucide-react';
+import Link from 'next/link';
 
 const projects = [
   {
     id: 'traffic-racing',
-    title: 'Traffic Highway Car Racing 3D',
+    title: 'Highway Car Racing: Car Games',
     description: 'A thrilling 3D car racing game set on a busy highway.',
     contributions: 'Led complete game development cycle, from planning to implementation. Integrated IAP and various ad networks, and performed extensive mobile optimization for smooth gameplay on a wide range of devices.',
     tech: ['C#', 'Unity', 'Mobile', 'Optimization', 'IAP', 'AdMob'],
     status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.highway.car.race.stunts',
   },
   {
     id: 'train-sim',
-    title: 'City Train Sim',
+    title: 'City Train Games Driver Sim 3D',
     description: 'A realistic train simulator navigating a bustling city.',
     contributions: 'Implemented new game modes and updated existing ones. Managed asset integration, IAP & ad services, and enhanced game design and performance.',
     tech: ['Unity', 'C#', 'Game Design', 'IAP', 'Ads'],
     status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.indian.train.driving.simulator',
   },
   {
-    id: 'parking-jam',
-    title: 'Truck Parking Jam Game',
-    description: 'A challenging puzzle game about parking trucks in tight spots.',
+    id: 'car-transporter',
+    title: 'Car Transporter 3d:Truck Games',
+    description: 'A challenging game about transporting cars with a heavy truck.',
     contributions: 'Developed core game modes and mechanics. Integrated IAP and advertising solutions, and focused on performance tuning for mobile platforms.',
     tech: ['C#', 'Unity', 'Mobile', 'Optimization', 'IAP'],
     status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.cartransport.truckdriving.simulator',
   },
   {
     id: 'police-parking',
@@ -41,6 +45,7 @@ const projects = [
     contributions: 'Responsible for full-cycle game development. Implemented AdMob & Unity Ads for monetization and ensured a polished user experience.',
     tech: ['Unity', 'C#', 'AdMob', 'Unity Ads', 'Mobile'],
     status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.res.car.parking',
   },
 ];
 
@@ -124,9 +129,15 @@ const ProjectsSection = () => {
                     {selectedProject.status}
                 </Badge>
                 <div className="flex gap-2 pt-4">
-                    <Button variant="outline"><Github className="w-4 h-4 mr-2" />Source</Button>
-                    <Button variant="outline"><Youtube className="w-4 h-4 mr-2" />Demo</Button>
-                    <Button variant="outline" className="bg-primary/10 border-primary/50 text-primary hover:bg-primary/20"><ExternalLink className="w-4 h-4 mr-2" />Live</Button>
+                    <Button variant="outline" disabled><Github className="w-4 h-4 mr-2" />Source</Button>
+                    <Button variant="outline" disabled><Youtube className="w-4 h-4 mr-2" />Demo</Button>
+                    {selectedProject.liveUrl && (
+                        <Button asChild className="bg-primary/10 border-primary/50 text-primary hover:bg-primary/20">
+                            <Link href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="w-4 h-4 mr-2" />Live
+                            </Link>
+                        </Button>
+                    )}
                 </div>
               </div>
             </div>
