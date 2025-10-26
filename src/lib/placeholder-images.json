@@ -35,6 +35,12 @@
       "description": "A screenshot of a mobile game called Alphabet Rush.",
       "imageUrl": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbHBoYWJldCUyMGdhbWV8ZW58MHx8fHwxNzYyMTkzODc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "alphabet game"
+    },
+    {
+      "id": "gangster-x",
+      "description": "A screenshot of an open-world gangster game.",
+      "imageUrl": "https://images.unsplash.com/photo-1617504062309-37385216c526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW5nc3RlciUyMGdhbWV8ZW58MHx8fHwxNzYyMTk2ODQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gangster game"
     }
   ]
 }

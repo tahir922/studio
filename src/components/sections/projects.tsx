@@ -18,7 +18,7 @@ const projects = [
     contributions: 'Led complete game development cycle, from planning to implementation. Integrated IAP and various ad networks, and performed extensive mobile optimization for smooth gameplay on a wide range of devices.',
     tech: ['C#', 'Unity', 'Mobile', 'Optimization', 'IAP', 'AdMob'],
     status: 'Released',
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.highway.car.race.stunts',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.highway.car.race.stunts&hl=en',
   },
   {
     id: 'train-sim',
@@ -27,7 +27,7 @@ const projects = [
     contributions: 'Implemented new game modes and updated existing ones. Managed asset integration, IAP & ad services, and enhanced game design and performance.',
     tech: ['Unity', 'C#', 'Game Design', 'IAP', 'Ads'],
     status: 'Released',
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.indian.train.driving.simulator',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.indian.train.driving.simulator&hl=en',
   },
   {
     id: 'car-transporter',
@@ -36,7 +36,7 @@ const projects = [
     contributions: 'Developed core game modes and mechanics. Integrated IAP and advertising solutions, and focused on performance tuning for mobile platforms.',
     tech: ['C#', 'Unity', 'Mobile', 'Optimization', 'IAP'],
     status: 'Released',
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.cartransport.truckdriving.simulator',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.cartransport.truckdriving.simulator&hl=en',
   },
   {
     id: 'police-parking',
@@ -45,7 +45,7 @@ const projects = [
     contributions: 'Responsible for full-cycle game development. Implemented AdMob & Unity Ads for monetization and ensured a polished user experience.',
     tech: ['Unity', 'C#', 'AdMob', 'Unity Ads', 'Mobile'],
     status: 'Released',
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.res.car.parking',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.res.car.parking&hl=en',
   },
   {
     id: 'truck-parking-puzzle',
@@ -64,6 +64,15 @@ const projects = [
     tech: ['Unity', 'C#', 'Mobile', 'Educational'],
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.bircube.alphabetrush&hl=en',
+  },
+  {
+    id: 'gangster-x',
+    title: 'Gangster X: Open World Game',
+    description: 'An immersive open-world gangster game with thrilling missions and a vast city to explore.',
+    contributions: 'Contributed to the development of core gameplay systems, mission design, and character mechanics. Focused on creating an expansive and interactive open-world experience for players.',
+    tech: ['Unity', 'C#', 'Open World', 'Game Design'],
+    status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.tom.gangster.openworld.gso.cure',
   },
 ];
 
