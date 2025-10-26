@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "traffic-racing",
+      "description": "A screenshot of a 3D car racing game on a highway.",
+      "imageUrl": "https://images.unsplash.com/photo-1727166827019-f82eb1eb1cc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyYWNpbmclMjBnYW1lfGVufDB8fHx8MTc2MTQ4OTMzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "racing game"
+    },
+    {
+      "id": "train-sim",
+      "description": "A screenshot of a city train simulator game.",
+      "imageUrl": "https://images.unsplash.com/photo-1666318972537-588361e6d1ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmFpbiUyMHNpbXVsYXRvcnxlbnwwfHx8fDE3NjE0ODkzMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "train simulator"
+    },
+    {
+      "id": "parking-jam",
+      "description": "A screenshot of a truck parking puzzle game.",
+      "imageUrl": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYXIlMjBwYXJraW5nfGVufDB8fHx8MTc2MTQ4OTMzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car parking"
+    },
+    {
+      "id": "police-parking",
+      "description": "A screenshot of a police car parking school game.",
+      "imageUrl": "https://images.unsplash.com/photo-1615775742364-2feb6533f8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cG9saWNlJTIwY2FyfGVufDB8fHx8MTc2MTQ3MjYyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "police car"
+    }
+  ]
 }
