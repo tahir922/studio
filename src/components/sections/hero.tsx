@@ -93,7 +93,7 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="group border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-            <a href="/muhammad_tahir_cv.pdf" download>
+            <a href="https://drive.google.com/uc?export=download&id=1wHOovbU5I4t43jujnGZEq7Z5ZbH0yEmP" target="_blank" rel="noopener noreferrer">
                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" /> Download CV
             </a>
           </Button>

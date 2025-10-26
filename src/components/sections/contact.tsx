@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormStatus } from 'react-dom';
-import { useEffect, useActionState } from 'react';
+import { useActionState, useEffect } from 'react';
 import { Section } from '@/components/section';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -36,20 +36,18 @@ const ContactSection = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    if (state.message) {
-      if (state.success) {
+    if (state.message && state.success) {
         toast({
           title: "Message Sent!",
           description: state.message,
         });
-      } else {
+      } else if (state.message) {
         toast({
           title: "Error",
           description: state.message,
           variant: "destructive",
         });
       }
-    }
   }, [state, toast]);
 
   return (
@@ -62,7 +60,7 @@ const ContactSection = () => {
           </p>
           <div className="space-y-4 pt-4">
             <Button asChild size="lg" className="w-full sm:w-auto">
-              <a href="/muhammad_tahir_cv.pdf" download>
+              <a href="https://drive.google.com/uc?export=download&id=1wHOovbU5I4t43jujnGZEq7Z5ZbH0yEmP" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" /> Download My CV
               </a>
             </Button>
