@@ -9,7 +9,10 @@ const contactSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+if (process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+}
 
 export async function submitContactForm(prevState: any, formData: FormData) {
   const validatedFields = contactSchema.safeParse({
@@ -23,6 +26,15 @@ export async function submitContactForm(prevState: any, formData: FormData) {
       errors: validatedFields.error.flatten().fieldErrors,
       message: "Please correct the errors below.",
       success: false,
+    };
+  }
+  
+  if (!resend) {
+    console.log("Resend not configured, returning mock success response.");
+    return {
+        errors: {},
+        message: "Thank you for your message! I'll get back to you soon. (This is a mock response as email sending is not configured).",
+        success: true,
     };
   }
 
