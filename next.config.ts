@@ -1,17 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-<<<<<<< HEAD
   // For Vercel deployment, use default Next.js behavior (no static export)
   // For GitHub Pages, uncomment the lines below:
   // output: "export",
-=======
-  // ✅ Enable static export mode
-  // output: "export",
-
-  // ✅ Add base path for GitHub Pages
-  // Replace 'my-nextjs-app' with your GitHub repository name
->>>>>>> 4c9768cdb368026318ca2e0324f98d394c21b5f0
   // basePath: "/studio",
   // assetPrefix: "/studio/",
 
