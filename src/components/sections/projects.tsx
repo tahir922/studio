@@ -56,6 +56,15 @@ const projects = [
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.impp.truck.parking.cargo.driver',
   },
+  {
+    id: 'alphabet-rush',
+    title: 'Alphabet Rush',
+    description: 'A fast-paced educational game about letters and words.',
+    contributions: 'Developed the core gameplay mechanics, character controls, and level progression. Integrated educational content and optimized for a smooth learning experience on mobile devices.',
+    tech: ['Unity', 'C#', 'Mobile', 'Educational'],
+    status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.bircube.alphabetrush&hl=en',
+  },
 ];
 
 type Project = (typeof projects)[0];

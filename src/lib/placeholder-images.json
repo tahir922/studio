@@ -29,6 +29,12 @@
       "description": "A screenshot of a truck parking puzzle game.",
       "imageUrl": "https://images.unsplash.com/photo-1549317336-206569e8ad89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cnVjayUyMHBhcmtpbmclMjBwYXJraW5nJTIwbG90fGVufDB8fHx8MTc2MjE5MjAyNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "truck puzzle"
+    },
+    {
+      "id": "alphabet-rush",
+      "description": "A screenshot of a mobile game called Alphabet Rush.",
+      "imageUrl": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbHBoYWJldCUyMGdhbWV8ZW58MHx8fHwxNzYyMTkzODc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "alphabet game"
     }
   ]
 }
