@@ -47,6 +47,15 @@ const projects = [
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.res.car.parking',
   },
+  {
+    id: 'truck-parking-puzzle',
+    title: 'Truck parking Jam Game: Puzzle',
+    description: 'A challenging puzzle game where you manage a crowded parking lot.',
+    contributions: 'Designed and developed the core puzzle mechanics and level progression system. Implemented UI/UX, and integrated monetization features like ads.',
+    tech: ['Unity', 'C#', 'Puzzle Design', 'Mobile'],
+    status: 'Released',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.impp.truck.parking.cargo.driver',
+  },
 ];
 
 type Project = (typeof projects)[0];

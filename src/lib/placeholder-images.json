@@ -23,6 +23,12 @@
       "description": "A screenshot of a police car parking school game.",
       "imageUrl": "https://images.unsplash.com/photo-1625449281218-cbb6183f0aec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb2xpY2UlMjBjYXJ8ZW58MHx8fHwxNzYxNDcyNjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "police car"
+    },
+    {
+      "id": "truck-parking-puzzle",
+      "description": "A screenshot of a truck parking puzzle game.",
+      "imageUrl": "https://images.unsplash.com/photo-1549317336-206569e8ad89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cnVjayUyMHBhcmtpbmclMjBwYXJraW5nJTIwbG90fGVufDB8fHx8MTc2MjE5MjAyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "truck puzzle"
     }
   ]
 }
