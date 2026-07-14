@@ -1,10 +1,22 @@
 {
   "placeholderImages": [
     {
+      "id": "floral-guardian",
+      "description": "Farming and combat adventure game screenshot.",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJkZW4lMjBnYW1lfGVufDB8fHx8MTc2MTE4MTI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy garden"
+    },
+    {
       "id": "traffic-racing",
       "description": "A screenshot of a 3D car racing game on a highway.",
       "imageUrl": "https://images.unsplash.com/photo-1696180393457-1695c896caff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoaWdod2F5JTIwcmFjaW5nfGVufDB8fHx8MTc2MTQ5MTE5OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "highway racing"
+    },
+    {
+      "id": "hyper-casual-runner",
+      "description": "Mobile runner game prototype screenshot.",
+      "imageUrl": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxydW5uaW5nJTIwZ2FtZXxlbnwwfHx8fDE3NjExODIyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful runner"
     },
     {
       "id": "train-sim",
@@ -13,34 +25,16 @@
       "imageHint": "train simulator"
     },
     {
-      "id": "car-transporter",
-      "description": "A screenshot of a car transporter truck game.",
-      "imageUrl": "https://images.unsplash.com/photo-1594957907749-f835921e6e9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cnVjayUyMGdhbWV8ZW58MHx8fHwxNzYxNDkxMTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "truck game"
+      "id": "parking-simulator",
+      "description": "Realistic car parking simulator screenshot.",
+      "imageUrl": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYXIlMjBwYXJraW5nfGVufDB8fHx8MTc2MTE4MzI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "parking car"
     },
     {
-      "id": "police-parking",
-      "description": "A screenshot of a police car parking school game.",
-      "imageUrl": "https://images.unsplash.com/photo-1625449281218-cbb6183f0aec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb2xpY2UlMjBjYXJ8ZW58MHx8fHwxNzYxNDcyNjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "police car"
-    },
-    {
-      "id": "truck-parking-puzzle",
-      "description": "A screenshot of a truck parking puzzle game.",
-      "imageUrl": "https://images.unsplash.com/photo-1549317336-206569e8ad89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cnVjayUyMHBhcmtpbmclMjBwYXJraW5nJTIwbG90fGVufDB8fHx8MTc2MjE5MjAyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "truck puzzle"
-    },
-    {
-      "id": "alphabet-rush",
-      "description": "A screenshot of a mobile game called Alphabet Rush.",
-      "imageUrl": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbHBoYWJldCUyMGdhbWV8ZW58MHx8fHwxNzYyMTkzODc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "alphabet game"
-    },
-    {
-      "id": "gangster-x",
-      "description": "A screenshot of an open-world gangster game.",
-      "imageUrl": "https://images.unsplash.com/photo-1617504062309-37385216c526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW5nc3RlciUyMGdhbWV8ZW58MHx8fHwxNzYyMTk2ODQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gangster game"
+      "id": "puzzle-adventure",
+      "description": "Puzzle adventure game level screenshot.",
+      "imageUrl": "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwdXp6bGUlMjBhZHZlbnR1cmV8ZW58MHx8fHwxNzYxMTgzMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "adventure puzzle"
     }
   ]
 }

@@ -3,16 +3,17 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Muhammad Tahir — Unity Game Developer | C# · Mobile Optimization · Ads & IAP',
-  description: 'Experienced game developer specialising in C# scripting, gameplay mechanics, mobile optimisation and UI using DoTween.',
+  title: 'Muhammad Tahir | Unity Game Developer',
+  description: 'Professional Unity Game Developer specializing in C#, gameplay systems, mobile game optimization, Firebase integration, and Android game development.',
+  keywords: ['Unity Developer', 'Unity Game Developer', 'Game Programmer', 'C#', 'Android Game Developer', 'Pakistan', 'Portfolio'],
   openGraph: {
-    title: 'Muhammad Tahir — Unity Game Developer',
-    description: 'Experienced game developer specialising in C# scripting, gameplay mechanics, mobile optimisation and UI using DoTween.',
-    url: 'https://tahir-games-portfolio.web.app', // Replace with actual URL
+    title: 'Muhammad Tahir | Unity Game Developer',
+    description: 'Professional Unity Game Developer specializing in C#, gameplay systems, mobile game optimization, Firebase integration, and Android game development.',
+    url: 'https://tahir-games-portfolio.web.app',
     siteName: 'Tahir Games Portfolio',
     images: [
       {
-        url: 'https://picsum.photos/seed/og-image/1200/630', // Replace with a proper OG image
+        url: 'https://picsum.photos/seed/og-image/1200/630',
         width: 1200,
         height: 630,
       },
