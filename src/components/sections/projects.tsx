@@ -47,7 +47,7 @@ const projects = [
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.indian.train.driving.simulator&hl=en',
     githubUrl: '',
-    demoUrl: ''
+    demoUrl: 'https://youtu.be/GbUlxessVRw'
   },
   {
     id: 'car-transporter',
