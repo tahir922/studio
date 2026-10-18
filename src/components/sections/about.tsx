@@ -16,7 +16,7 @@ const AboutSection = () => {
           <h2 className="text-3xl font-bold font-headline text-primary">About Me</h2>
           <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
             <p>
-              Muhammad Tahir is an independent Unity Game Developer based in Pakistan with over 4 years of professional experience in Unity and C#.
+              Muhammad Tahir is an independent Unity Game Developer based in Pakistan with over 6 years of professional experience in Unity and C#.
             </p>
             <p>
               I specialize in creating high-quality Android games and gameplay systems while focusing on clean architecture, performance, and excellent player experience.
