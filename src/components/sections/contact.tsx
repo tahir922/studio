@@ -1,57 +1,73 @@
 "use client";
 
-import { useFormStatus } from 'react-dom';
-import { useActionState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Section } from '@/components/section';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Download, Linkedin, Send, Loader2, Github, Smartphone, AtSign, MapPin } from 'lucide-react';
-import { submitContactForm } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={pending}>
-      {pending ? (
-        <>
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Sending...
-        </>
-      ) : (
-        <>
-          <Send className="mr-2 h-4 w-4" />
-          Send Message
-        </>
-      )}
-    </Button>
-  );
-}
+const WEB3FORMS_ACCESS_KEY = "828809d2-8210-4c27-9d07-bcf5f1978ae8";
 
 const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const initialState = { message: null, errors: {}, success: false };
-  const [state, dispatch] = useActionState(submitContactForm, initialState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  useEffect(() => {
-    if (state.message && state.success) {
-      toast({
-        title: "Message Sent!",
-        description: state.message,
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name,
+          email,
+          message,
+          subject: `New portfolio inquiry from ${name}`,
+          from_name: "Muhammad Tahir Portfolio",
+        }),
       });
-      formRef.current?.reset();
-    } else if (state.message) {
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out! Your message was sent directly to Tahir.",
+        });
+        formRef.current?.reset();
+      } else {
+        toast({
+          title: "Submission Notice",
+          description: result.message || "Failed to send message. Please check domain authorization.",
+          variant: "destructive",
+        });
+      }
+    } catch (err: any) {
       toast({
         title: "Error",
-        description: state.message,
+        description: "Network error occurred. Please try again or email directly.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
-  }, [state, toast]);
+  };
 
   return (
     <Section id="contact" className="bg-secondary/30">
@@ -108,23 +124,32 @@ const ContactSection = () => {
         </div>
 
         <div className="bg-card p-8 rounded-xl border border-border/50 shadow-sm">
-          <form ref={formRef} action={dispatch} className="space-y-4">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input id="name" name="name" type="text" placeholder="Your Name" required className="bg-background/50" />
-              {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name[0]}</p>}
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input id="email" name="email" type="email" placeholder="your.email@example.com" required className="bg-background/50" />
-              {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email[0]}</p>}
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" name="message" placeholder="Your message here..." required minLength={10} className="bg-background/50 min-h-[120px]" />
-              {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>}
             </div>
-            <SubmitButton />
+            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <Send className="mr-2 h-4 w-4" />
+                  Send Message
+                </>
+              )}
+            </Button>
           </form>
         </div>
       </div>
