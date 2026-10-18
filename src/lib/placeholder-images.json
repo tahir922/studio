@@ -1,52 +1,46 @@
 {
   "placeholderImages": [
     {
-      "id": "floral-guardian",
-      "description": "Farming and combat adventure game screenshot.",
-      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJkZW4lMjBnYW1lfGVufDB8fHx8MTc2MTE4MTI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fantasy garden"
-    },
-    {
-      "id": "traffic-racing",
-      "description": "A screenshot of a 3D car racing game on a highway.",
-      "imageUrl": "https://images.unsplash.com/photo-1696180393457-1695c896caff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoaWdod2F5JTIwcmFjaW5nfGVufDB8fHx8MTc2MTQ5MTE5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "highway-car-racing",
+      "description": "Highway Car Racing: Car Games gameplay screenshot.",
+      "imageUrl": "/projects/highway-car-racing.jpg",
       "imageHint": "highway racing"
     },
     {
-      "id": "train-sim",
-      "description": "A screenshot of a city train simulator game.",
-      "imageUrl": "https://images.unsplash.com/photo-1666318972537-588361e6d1ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmFpbiUyMHNpbXVsYXRvcnxlbnwwfHx8fDE3NjE0ODkzMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "city-train-sim",
+      "description": "City Train Games Driver Sim 3D gameplay screenshot.",
+      "imageUrl": "/projects/city-train-sim.jpg",
       "imageHint": "train simulator"
     },
     {
       "id": "car-transporter",
-      "description": "Car transport truck driving simulator.",
-      "imageUrl": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cnVjayUyMHRyYW5zcG9ydHxlbnwwfHx8fDE3NjE0OTExOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Car Transporter 3D: Truck Games gameplay screenshot.",
+      "imageUrl": "/projects/car-transporter.jpg",
       "imageHint": "truck transporter"
     },
     {
       "id": "police-parking",
-      "description": "Police car parking simulation game.",
-      "imageUrl": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb2xpY2UlMjBjYXJ8ZW58MHx8fHwxNzYxNDkxMTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "police car"
+      "description": "Police Car Parking School Game gameplay screenshot.",
+      "imageUrl": "/projects/police-parking.jpg",
+      "imageHint": "police car parking"
     },
     {
       "id": "truck-parking-jam",
-      "description": "Truck parking puzzle game.",
-      "imageUrl": "https://images.unsplash.com/photo-1606206591513-adbfdd873952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwdXp6bGUlMjBsb2dpc3RpY3N8ZW58MHx8fHwxNzYxNDkxMTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logistics puzzle"
+      "description": "Truck Parking Jam Game: Puzzle gameplay screenshot.",
+      "imageUrl": "/projects/truck-parking-jam.jpg",
+      "imageHint": "truck parking puzzle"
     },
     {
-      "id": "alphabet-rush",
-      "description": "Alphabet rush runner game.",
-      "imageUrl": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxydW5uaW5nJTIwZ2FtZXxlbnwwfHx8fDE3NjExODIyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "colorful runner"
+      "id": "city-roamer",
+      "description": "City Roamer: Drive & Explore gameplay screenshot.",
+      "imageUrl": "/projects/city-roamer.jpg",
+      "imageHint": "city exploration"
     },
     {
-      "id": "gangster-x",
-      "description": "Gangster X open world game.",
-      "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aWRlbyUyMGdhbWV8ZW58MHx8fHwxNzYxNDkxMTk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city game"
+      "id": "city-ambulance",
+      "description": "City Ambulance Hospital Rescue gameplay screenshot.",
+      "imageUrl": "/projects/city-ambulance.jpg",
+      "imageHint": "city ambulance rescue"
     }
   ]
 }

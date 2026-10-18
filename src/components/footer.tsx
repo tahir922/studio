@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   const socialItems = [
-    { label: 'GitHub', href: 'https://github.com/MuhammadTahir', icon: Github },
+    { label: 'GitHub', href: 'https://github.com/tahir922', icon: Github },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammad-tahir-807960126/', icon: Linkedin },
     { label: 'Google Play', href: 'https://play.google.com/store/apps/dev?id=5180631627091238474', icon: Smartphone },
   ];

@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormStatus } from 'react-dom';
-import { useActionState, useEffect } from 'react';
+import { useActionState, useEffect, useRef } from 'react';
 import { Section } from '@/components/section';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -32,23 +32,25 @@ function SubmitButton() {
 }
 
 const ContactSection = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const initialState = { message: null, errors: {}, success: false };
   const [state, dispatch] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
     if (state.message && state.success) {
-        toast({
-          title: "Message Sent!",
-          description: state.message,
-        });
-      } else if (state.message) {
-        toast({
-          title: "Error",
-          description: state.message,
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Message Sent!",
+        description: state.message,
+      });
+      formRef.current?.reset();
+    } else if (state.message) {
+      toast({
+        title: "Error",
+        description: state.message,
+        variant: "destructive",
+      });
+    }
   }, [state, toast]);
 
   return (
@@ -83,7 +85,7 @@ const ContactSection = () => {
 
           <div className="flex flex-wrap gap-4 pt-4">
             <Button asChild variant="outline" size="sm">
-              <Link href="https://github.com/MuhammadTahir" target="_blank">
+              <Link href="https://github.com/tahir922" target="_blank">
                 <Github className="mr-2 h-4 w-4" /> GitHub
               </Link>
             </Button>
@@ -106,7 +108,7 @@ const ContactSection = () => {
         </div>
 
         <div className="bg-card p-8 rounded-xl border border-border/50 shadow-sm">
-          <form action={dispatch} className="space-y-4">
+          <form ref={formRef} action={dispatch} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input id="name" name="name" type="text" placeholder="Your Name" required className="bg-background/50" />
