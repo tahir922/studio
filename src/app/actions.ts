@@ -1,13 +1,14 @@
 "use server";
 
 import { z } from "zod";
-import { Resend } from 'resend';
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().trim().email({ message: "Invalid email address." }),
   message: z.string().trim().min(10, { message: "Message must be at least 10 characters." }),
 });
+
+const WEB3FORMS_ACCESS_KEY = "828809d2-8210-4c27-9d07-bcf5f1978ae8";
 
 export async function submitContactForm(prevState: any, formData: FormData) {
   const validatedFields = contactSchema.safeParse({
@@ -25,55 +26,45 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   }
 
   const { name, email, message } = validatedFields.data;
-  const apiKey = process.env.RESEND_API_KEY;
-
-  if (!apiKey || apiKey.trim() === "") {
-    console.log("RESEND_API_KEY is not set. Contact form simulated success.");
-    return {
-      errors: {},
-      message: "Thank you for your message! (Development Mode: RESEND_API_KEY is not configured yet, so email was simulated).",
-      success: true,
-    };
-  }
 
   try {
-    const resend = new Resend(apiKey.trim());
-    const { data, error } = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: 'tahir8722@gmail.com',
-      subject: `New message from ${name} via your portfolio`,
-      reply_to: email,
-      html: `
-        <div style="font-family: sans-serif; font-size: 15px; color: #333; line-height: 1.6;">
-          <h2 style="color: #6366f1;">New Portfolio Inquiry</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-          <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 16px 0;" />
-          <p><strong>Message:</strong></p>
-          <p style="white-space: pre-wrap; background-color: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0;">${message}</p>
-        </div>
-      `,
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name,
+        email,
+        message,
+        subject: `New message from ${name} via your portfolio`,
+        from_name: "Portfolio Contact Form",
+      }),
     });
 
-    if (error) {
-      console.error("Resend error:", error);
+    const result = await response.json();
+
+    if (result.success) {
       return {
         errors: {},
-        message: `Sorry, unable to send email: ${error.message || "Please try again later."}`,
+        message: "Thank you for your message! I'll get back to you soon.",
+        success: true,
+      };
+    } else {
+      console.error("Web3Forms error:", result);
+      return {
+        errors: {},
+        message: "Sorry, something went wrong. Please try again later.",
         success: false,
       };
     }
-
-    return {
-      errors: {},
-      message: "Thank you for your message! I'll get back to you soon.",
-      success: true,
-    };
   } catch (exception: any) {
     console.error("Email sending exception:", exception);
     return {
       errors: {},
-      message: "An unexpected error occurred while sending your message. Please try again.",
+      message: "An unexpected error occurred. Please try again.",
       success: false,
     };
   }
