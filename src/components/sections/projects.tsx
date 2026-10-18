@@ -7,8 +7,14 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Youtube, Smartphone, Star, DownloadCloud } from 'lucide-react';
+import { ExternalLink, Github, Youtube, Smartphone, Star, DownloadCloud, Play, Image as ImageIcon } from 'lucide-react';
 import Link from 'next/link';
+
+const getYouTubeEmbedUrl = (url?: string) => {
+  if (!url) return null;
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+  return match ? `https://www.youtube.com/embed/${match[1]}?autoplay=1&rel=0` : null;
+};
 
 const projects = [
   {
@@ -73,7 +79,7 @@ const projects = [
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.res.car.parking&hl=en',
     githubUrl: '',
-    demoUrl: ''
+    demoUrl: 'https://youtu.be/TOyOervSHco'
   },
   {
     id: 'truck-parking-jam',
@@ -144,6 +150,11 @@ const ProjectCard = ({ project, onOpen }: { project: Project; onOpen: (project: 
           data-ai-hint={image.imageHint}
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        {project.demoUrl && (
+          <div className="absolute bottom-2 left-2 flex items-center gap-1.5 bg-black/75 backdrop-blur-sm text-white px-2 py-0.5 rounded-md text-[10px] font-medium shadow-sm">
+            <Play className="w-3 h-3 text-red-500 fill-current" /> Video Demo
+          </div>
+        )}
         <div className="absolute top-2 right-2 flex flex-col gap-1">
           <Badge variant="secondary" className="bg-background/85 backdrop-blur-sm border-primary/20 text-[10px] py-0 font-medium">
             {project.platform}
@@ -198,7 +209,19 @@ const ProjectCard = ({ project, onOpen }: { project: Project; onOpen: (project: 
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showVideo, setShowVideo] = useState(false);
   const image = PlaceHolderImages.find(p => p.id === selectedProject?.id) || PlaceHolderImages[0];
+  const embedUrl = selectedProject ? getYouTubeEmbedUrl(selectedProject.demoUrl) : null;
+
+  const handleOpenProject = (project: Project) => {
+    setSelectedProject(project);
+    setShowVideo(false);
+  };
+
+  const handleCloseDialog = () => {
+    setSelectedProject(null);
+    setShowVideo(false);
+  };
 
   return (
     <>
@@ -210,11 +233,11 @@ const ProjectsSection = () => {
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map(p => <ProjectCard key={p.id} project={p} onOpen={setSelectedProject} />)}
+          {projects.map(p => <ProjectCard key={p.id} project={p} onOpen={handleOpenProject} />)}
         </div>
       </Section>
 
-      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+      <Dialog open={!!selectedProject} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-3xl bg-card border-border/50">
           <DialogHeader>
             <DialogTitle className="text-2xl font-headline text-primary">{selectedProject?.title}</DialogTitle>
@@ -225,15 +248,42 @@ const ProjectsSection = () => {
           {selectedProject && (
             <div className="grid md:grid-cols-2 gap-8 mt-2">
               <div className="space-y-4">
-                <div className="relative aspect-video rounded-md overflow-hidden border border-border/50 bg-muted">
-                  <Image
-                    src={image.imageUrl}
-                    alt={selectedProject.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 400px"
-                    data-ai-hint={image.imageHint}
-                    className="object-cover"
-                  />
+                <div className="relative aspect-video rounded-lg overflow-hidden border border-border/50 bg-black shadow-inner">
+                  {showVideo && embedUrl ? (
+                    <iframe
+                      src={embedUrl}
+                      title={`${selectedProject.title} Gameplay Video Demo`}
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <>
+                      <Image
+                        src={image.imageUrl}
+                        alt={selectedProject.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        data-ai-hint={image.imageHint}
+                        className="object-cover"
+                      />
+                      {embedUrl && (
+                        <button
+                          type="button"
+                          onClick={() => setShowVideo(true)}
+                          className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 hover:bg-black/55 transition-colors group/play cursor-pointer"
+                          aria-label="Play gameplay demo video"
+                        >
+                          <div className="w-14 h-14 rounded-full bg-red-600 group-hover/play:bg-red-700 text-white flex items-center justify-center shadow-2xl transition-transform group-hover/play:scale-110">
+                            <Play className="w-6 h-6 ml-1 fill-white" />
+                          </div>
+                          <span className="mt-2 text-xs font-semibold text-white drop-shadow bg-black/70 px-3 py-1 rounded-full border border-white/20">
+                            Play Gameplay Demo
+                          </span>
+                        </button>
+                      )}
+                    </>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2">
@@ -243,6 +293,23 @@ const ProjectsSection = () => {
                   <Badge variant="secondary" className="border-border/50">
                     {selectedProject.rating}
                   </Badge>
+                  {embedUrl && (
+                    <button
+                      type="button"
+                      onClick={() => setShowVideo(!showVideo)}
+                      className="text-[11px] font-semibold text-red-400 hover:text-red-300 transition-colors ml-auto flex items-center gap-1"
+                    >
+                      {showVideo ? (
+                        <>
+                          <ImageIcon className="w-3.5 h-3.5" /> View Screenshot
+                        </>
+                      ) : (
+                        <>
+                          <Play className="w-3.5 h-3.5 fill-current" /> Watch Video
+                        </>
+                      )}
+                    </button>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap gap-1.5">
@@ -282,10 +349,15 @@ const ProjectsSection = () => {
                           <Github className="w-4 h-4 mr-2" /> GitHub
                         </Link>
                     </Button>
-                    <Button asChild size="sm" variant="outline" disabled={!selectedProject.demoUrl}>
-                        <Link href={selectedProject.demoUrl || "#"}>
-                          <Youtube className="w-4 h-4 mr-2" /> Demo
-                        </Link>
+                    <Button
+                        size="sm"
+                        variant={showVideo ? "default" : "outline"}
+                        disabled={!selectedProject.demoUrl}
+                        onClick={() => setShowVideo(!showVideo)}
+                        className={showVideo ? "bg-red-600 hover:bg-red-700 text-white" : ""}
+                    >
+                        <Youtube className="w-4 h-4 mr-2 text-red-500" />
+                        {showVideo ? "Screenshot" : "Watch Demo"}
                     </Button>
                     <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground col-span-2" disabled={!selectedProject.liveUrl}>
                         <Link href={selectedProject.liveUrl || "#"} target="_blank">
