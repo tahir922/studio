@@ -111,7 +111,7 @@ const projects = [
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.tom.gangster.openworld.gso.cure',
     githubUrl: '',
-    demoUrl: ''
+    demoUrl: 'https://youtu.be/qNqTZvjyTXE'
   },
   {
     id: 'city-ambulance',
