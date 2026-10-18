@@ -31,7 +31,7 @@ const projects = [
     status: 'Released',
     liveUrl: 'https://play.google.com/store/apps/details?id=com.frp.highway.car.race.stunts&hl=en',
     githubUrl: '',
-    demoUrl: ''
+    demoUrl: 'https://youtu.be/ZEo_wZaGrd0'
   },
   {
     id: 'city-train-sim',
